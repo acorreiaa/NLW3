@@ -3,11 +3,13 @@ const express = require('express');
 const path = require('path');
 const pages = require('./pages.js');
 
-console.log(pages)
+console.log(pages)  
 // iniciando o express
 const server = express()
 server
-// utilizando os arquivos estáticos
+    // utilizar body da requisição
+    .use(express.urlencoded({ extended: true }))
+    // utilizando os arquivos estáticos
     .use(express.static('public'))
 
     // configurar template engine 
@@ -18,6 +20,7 @@ server
     .get('/orphanage', pages.orphanage)
     .get('/orphanages', pages.orphanages)
     .get('/create-orphanage', pages.createOrphanage)
+    .post('/save-orphanage', pages.saveOrphanage)
     
 //ligar  o servidor
 server.listen(5500)

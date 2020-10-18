@@ -95,6 +95,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    line-height: 1.5;
     /*display: grid;
     grid-template-columns: 1fr, 1fr;
     column-gap: 2rem;*/
@@ -123,4 +124,10 @@ main {
     border: 1px solid #A1E9C5;
     border-radius: 20px;
     color: #37c77f;
+}
+
+.open-on-weekends.closed {
+    background: linear-gradient(154,16deg, #FCF0F4 7.85%, #FFFFFF 91.03%);
+    border: 1px solid #FFBCD4;
+    color: #ff999d;
 }
